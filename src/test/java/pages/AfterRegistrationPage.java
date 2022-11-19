@@ -7,13 +7,7 @@ import stepDefinition.Hook;
 public class AfterRegistrationPage
 {
     public WebElement message ()
-    {
-        WebElement message= Hook.driver.findElement(By.cssSelector("div[class=\"result\"]"));
-        return message;
-    }
+    { return Hook.driver.findElement(By.cssSelector("div[class=\"result\"]")); }
     public WebElement logout ()
-    {
-        WebElement logout = Hook.driver.findElement(By.cssSelector("a[class=\"ico-logout\"]"));
-        return logout;
-    }
+    { return Hook.driver.findElement(By.cssSelector("a[class=\"ico-logout\"]")); }
 }

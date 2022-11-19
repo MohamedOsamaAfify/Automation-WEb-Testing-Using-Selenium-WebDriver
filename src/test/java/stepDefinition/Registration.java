@@ -67,15 +67,7 @@ public class Registration {
             if (state.equalsIgnoreCase("true")) {
                 while (!(registerPage.NewsletterState().isSelected()))
                     registerPage.NewsletterState().click();
-                while ((registerPage.NewsletterState().isSelected()))
-                    registerPage.NewsletterState().click();
-                while (!(registerPage.NewsletterState().isSelected()))
-                    registerPage.NewsletterState().click();
             } else {
-                while ((registerPage.NewsletterState().isSelected()))
-                    registerPage.NewsletterState().click();
-                while (!(registerPage.NewsletterState().isSelected()))
-                    registerPage.NewsletterState().click();
                 while ((registerPage.NewsletterState().isSelected()))
                     registerPage.NewsletterState().click();
             }
@@ -94,6 +86,7 @@ public class Registration {
     @Then("^user should see \"(.*?)\" message")
     public void userShouldSeeMessage(String message)
     {
-            verifyRegistration.assertEquals(afterRegistrationPage.message().getText(), message, "Registration Process Failed_1");
+            verifyRegistration.assertEquals(afterRegistrationPage.message().getText(), message, "Registration Process Failed");
+            verifyRegistration.assertAll();
     }
 }

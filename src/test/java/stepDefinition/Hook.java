@@ -10,14 +10,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Hook
 {
     static public WebDriver driver =null;
-    static public String validEmail= "vucuqoh.gitofe@gotgel.org\n";
+    static public String validEmail= "firomadupe@gotgel.org\n";
     static public String validPassword="iti_2022";
     static public boolean isLogin=false;
     AfterRegistrationPage afterRegistrationPage = new AfterRegistrationPage();
@@ -31,9 +30,7 @@ public class Hook
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        //driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
-        //driver.manage().deleteAllCookies();
-
+        driver.manage().deleteAllCookies();
     }
 
     @AfterAll
@@ -55,7 +52,7 @@ public class Hook
     @And("user should login successfully and see log out button")
     public void userLoginSuccessfullyand()
     {
-        verifyRegistration.assertTrue(afterRegistrationPage.logout().isDisplayed(), "Registration Process Failed");
+        verifyRegistration.assertTrue(afterRegistrationPage.logout().isDisplayed(), "Login Process Failed");
         verifyRegistration.assertAll();
         Hook.isLogin=true;
     }

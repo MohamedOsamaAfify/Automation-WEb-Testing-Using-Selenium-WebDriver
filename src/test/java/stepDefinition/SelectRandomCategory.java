@@ -37,7 +37,7 @@ public class SelectRandomCategory
         List<WebElement> availableSubCat= new ArrayList<>();   // ~
         action.moveToElement(homePage.categories().get(mainRandomNumber)).build().perform();
 
-        for(int i=0;i<numberOfSubCat;i++)
+        for(int i = 0; i < numberOfSubCat; i++)
         {
             if(homePage.allSubCategories().get(i).isDisplayed())
             {
@@ -45,10 +45,10 @@ public class SelectRandomCategory
                 availableSubCat.add(homePage.allSubCategories().get(i));
             }
         }
-        if(numberOfAvailableSubCat>0)
+        if(numberOfAvailableSubCat > 0)
         {
-            subRandomNumber = ((this.random.nextInt(numberOfAvailableSubCat)));
-            expectedURL=availableSubCat.get(subRandomNumber).getAttribute("href");
+            subRandomNumber = ((random.nextInt(numberOfAvailableSubCat)));  //this
+            expectedURL = availableSubCat.get(subRandomNumber).getAttribute("href");
             availableSubCat.get(subRandomNumber).click();
         }
         else

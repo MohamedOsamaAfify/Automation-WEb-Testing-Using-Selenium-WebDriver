@@ -37,15 +37,14 @@ public class Search
     @Then("user could find relative results")
     public void userCouldFindRelativeResults() throws InterruptedException {
         Thread.sleep(1500);
-        int numberOfItems =searchResultPage.productList().size();
+        int numberOfItems = searchResultPage.productList().size();
         int check;
-        searchResult.assertFalse(numberOfItems<=0,"No Relevant Search Items For This Search Term");
+        searchResult.assertFalse(numberOfItems <= 0,"No Relevant Search Items For This Search Term");
         searchResult.assertAll();
         ArrayList<String> resultProductList =new ArrayList();
-        for(int i =0;i<numberOfItems;i++)
+        for(int i = 0; i < numberOfItems; i++)
         {
             resultProductList.add(searchResultPage.productList().get(i).getText());
-            //check= resultProductList.get(i).toUpperCase().indexOf(searchTerm.toUpperCase());
             //System.out.println(resultProductList);
 
             searchResult.assertTrue(resultProductList.get(i).toLowerCase().contains(searchTerm)

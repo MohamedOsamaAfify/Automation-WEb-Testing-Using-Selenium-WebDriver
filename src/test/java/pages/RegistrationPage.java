@@ -26,20 +26,17 @@ public class RegistrationPage
     public Select DateOfBirthDay ()
     {
         WebElement DateOfBirthDay= Hook.driver.findElement(By.cssSelector("select[name=\"DateOfBirthDay\"]"));
-        Select Day = new Select(DateOfBirthDay);
-        return Day;
+        return new Select(DateOfBirthDay);
     }
     public Select DateOfBirthMonth ()
     {
         WebElement DateOfBirthMonth= Hook.driver.findElement(By.cssSelector("select[name=\"DateOfBirthMonth\"]"));
-        Select Month = new Select(DateOfBirthMonth);
-        return Month;
+        return new Select(DateOfBirthMonth);
     }
     public Select DateOfBirthYear ()
     {
         WebElement DateOfBirthYear= Hook.driver.findElement(By.cssSelector("select[name=\"DateOfBirthYear\"]"));
-        Select Year = new Select(DateOfBirthYear);
-        return Year;
+        return new Select(DateOfBirthYear);
     }
     public WebElement Email ()
     {
@@ -58,11 +55,7 @@ public class RegistrationPage
         return Hook.driver.findElement(By.cssSelector("input[id=\"Password\"]"));
     }
     public WebElement ConfirmPasswordField ()
-    {
-        return Hook.driver.findElement(By.cssSelector("input[id=\"ConfirmPassword\"]"));
-    }
+    { return Hook.driver.findElement(By.cssSelector("input[id=\"ConfirmPassword\"]")); }
     public WebElement register_button ()
-    {
-        return Hook.driver.findElement(By.cssSelector("button[id=\"register-button\"]"));
-    }
+    { return Hook.driver.findElement(By.cssSelector("button[id=\"register-button\"]")); }
 }

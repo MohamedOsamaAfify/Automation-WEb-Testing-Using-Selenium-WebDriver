@@ -11,9 +11,7 @@ public class PasswordRecoveryPage
         return Hook.driver.findElement(By.cssSelector("input[id=\"Email\"]"));
     }
     public WebElement RecoverButton()
-    {
-        return Hook.driver.findElement(By.cssSelector("button[class=\"button-1 password-recovery-button\"]"));
-    }
+    { return Hook.driver.findElement(By.cssSelector("button[class=\"button-1 password-recovery-button\"]")); }
     public WebElement message()
     {
         return Hook.driver.findElement(By.cssSelector("p[class=\"content\"]"));

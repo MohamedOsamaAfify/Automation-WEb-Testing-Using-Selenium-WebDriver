@@ -34,7 +34,7 @@ public class Wishlist
     public void userShouldFoundTheProductAddedToWishlistInTheWishlist()
     {
         anyProductPage.wishlist().click();
-        int numberOfItemsInWishlist=wishlistPage.productName().size();
+        int numberOfItemsInWishlist = wishlistPage.productName().size();
         for(int i=0;i<numberOfItemsInWishlist;i++)
         {
             actualProductInWishlist.add(wishlistPage.productName().get(i).getText());

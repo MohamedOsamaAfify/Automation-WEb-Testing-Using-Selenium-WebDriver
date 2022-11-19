@@ -12,7 +12,7 @@ public class AnyProductPage
 {
     public boolean isAddToCartButton()
     {
-        boolean isAddToCartButton=false;
+        boolean isAddToCartButton = false;
         Hook.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 
              WebElement button = Hook.driver.findElement(By.xpath("//button[@class=\"button-1 add-to-cart-button\"]"));
@@ -26,8 +26,7 @@ public class AnyProductPage
     }
     public WebElement addToCartButton()
     {
-        WebElement addToCartButton= Hook.driver.findElement(By.xpath("//button[@class=\"button-1 add-to-cart-button\"]"));
-        return addToCartButton;
+        return Hook.driver.findElement(By.xpath("//button[@class=\"button-1 add-to-cart-button\"]"));
     }
     public boolean isAddedToCartSuccessNotification()
     {
@@ -46,8 +45,7 @@ public class AnyProductPage
     }
     public WebElement loadingProgress()
     {
-        WebElement loadingProgress= Hook.driver.findElement(By.xpath("//div[@class=\"ajax-loading-block-window\"]"));
-        return loadingProgress;
+        return Hook.driver.findElement(By.xpath("//div[@class=\"ajax-loading-block-window\"]"));
     }
     public boolean isProductHasAttributes()
     {
@@ -81,13 +79,11 @@ public class AnyProductPage
     }
     public WebElement productName()
     {
-        WebElement productName= Hook.driver.findElement(By.xpath("//div[@class=\"product-name\"]/h1"));
-        return productName;
+        return Hook.driver.findElement(By.xpath("//div[@class=\"product-name\"]/h1"));
     }
     public WebElement shoppingCart()
     {
-        WebElement shoppingCart= Hook.driver.findElement(By.xpath("//a[@class=\"ico-cart\"]"));
-        return shoppingCart;
+        return Hook.driver.findElement(By.xpath("//a[@class=\"ico-cart\"]"));
     }
     public boolean availability()
     {
@@ -105,22 +101,18 @@ public class AnyProductPage
     }
     public WebElement addToWishlistButton()
     {
-        WebElement addToWishlistButton= Hook.driver.findElement(By.xpath("//div[@class=\"add-to-wishlist\"]/button"));
-        return addToWishlistButton;
+        return Hook.driver.findElement(By.xpath("//div[@class=\"add-to-wishlist\"]/button"));
     }
     public WebElement wishlist()
     {
-        WebElement wishlist= Hook.driver.findElement(By.xpath("//a[@href=\"/wishlist\" and @class=\"ico-wishlist\"]"));
-        return wishlist;
+        return Hook.driver.findElement(By.xpath("//a[@href=\"/wishlist\" and @class=\"ico-wishlist\"]"));
     }
     public WebElement addToCompareList()
     {
-        WebElement addToCompareList= Hook.driver.findElement(By.xpath("//div[@class=\"compare-products\"]/button"));
-        return addToCompareList;
+        return Hook.driver.findElement(By.xpath("//div[@class=\"compare-products\"]/button"));
     }
     public WebElement compareList()
     {
-        WebElement compareList = Hook.driver.findElement(By.xpath("//a[@href=\"/compareproducts\"]"));
-        return compareList;
+        return Hook.driver.findElement(By.xpath("//a[@href=\"/compareproducts\"]"));
     }
 }

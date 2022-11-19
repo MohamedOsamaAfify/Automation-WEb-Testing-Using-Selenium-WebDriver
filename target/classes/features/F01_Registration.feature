@@ -5,10 +5,9 @@ Feature: User could register for new account
     Given user navigates to home page
     And user clicks on Register link in upper right
     And user select gender "Male"
-    And user enter first name "Omar"
-    #| Omar | then use DataTable in function related
-    And user enter last name "Tarek"
-    And user enter his or her date of birth "28/9/2009"
+    And user enter first name "Mohamed"
+    And user enter last name "Osama"
+    And user enter his or her date of birth "2/5/1997"
     And user enter his or her email
     And user enter his or her company "ITI"
     And user select Newsletter option "True"

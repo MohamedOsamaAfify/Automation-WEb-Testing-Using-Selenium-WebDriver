@@ -10,7 +10,6 @@ public class WishlistPage
 {
     public List<WebElement> productName ()
     {
-        List <WebElement> productName = Hook.driver.findElements(By.xpath("//div[@class=\"table-wrapper\"]//tbody/tr//td[@class=\"product\"]/a"));
-        return productName;
+        return Hook.driver.findElements(By.xpath("//td[@class=\"product\"]/a"));
     }
 }

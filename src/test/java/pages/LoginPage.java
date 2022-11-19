@@ -15,13 +15,9 @@ public class LoginPage
         return Hook.driver.findElement(By.cssSelector("input[class=\"password\"]"));
     }
     public WebElement loginButton ()
-    {
-        return Hook.driver.findElement(By.cssSelector("button[class=\"button-1 login-button\"]"));
-    }
+    { return Hook.driver.findElement(By.cssSelector("button[class=\"button-1 login-button\"]")); }
     public WebElement forgotPassword ()
-    {
-        return Hook.driver.findElement(By.cssSelector("a[href=\"/passwordrecovery\"]"));
-    }
+    { return Hook.driver.findElement(By.cssSelector("a[href=\"/passwordrecovery\"]")); }
     public WebElement errorMessage()
     {
         return Hook.driver.findElement

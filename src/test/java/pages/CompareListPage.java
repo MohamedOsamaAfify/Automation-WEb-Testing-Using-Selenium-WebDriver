@@ -10,7 +10,6 @@ public class CompareListPage
 {
     public List<WebElement> productName ()
     {
-        List <WebElement> productName = Hook.driver.findElements(By.xpath("//div[@class=\"table-wrapper\"]//tbody/tr[@class=\"product-name\"]/td/a"));
-        return productName;
+        return Hook.driver.findElements(By.xpath("tr[@class=\"product-name\"]/td/a"));
     }
 }

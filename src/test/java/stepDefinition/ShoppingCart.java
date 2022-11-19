@@ -12,9 +12,9 @@ import java.util.Random;
 
 public class ShoppingCart
 {
-    AnyCategoryPage anyCategoryPage=new AnyCategoryPage();
-    AnyProductPage anyProductPage=new AnyProductPage();
-    ShoppingCartPage shoppingCartPage=new ShoppingCartPage();
+    AnyCategoryPage anyCategoryPage = new AnyCategoryPage();
+    AnyProductPage anyProductPage = new AnyProductPage();
+    ShoppingCartPage shoppingCartPage = new ShoppingCartPage();
     Random random = new Random();
     int x=5;
     SoftAssert productsAddedToCart=new SoftAssert();
@@ -24,7 +24,7 @@ public class ShoppingCart
     @Then("user click on random product")
     public void userClickOnRandomProduct()
     {
-        int numberOFAvailableProducts=anyCategoryPage.productListInStock().size();
+        int numberOFAvailableProducts = anyCategoryPage.productListInStock().size();
         //System.out.println("x:   "+ numberOFAvailableProducts);
         int randomNumber = random.nextInt(numberOFAvailableProducts);
         anyCategoryPage.productListInStock().get(randomNumber).click();
@@ -68,8 +68,8 @@ public class ShoppingCart
         {
             //wait until product added to cart
         }
-        int actualNumberOfProductInCart=shoppingCartPage.productName().size();
-        for(int i=0;i<actualNumberOfProductInCart;i++) {
+        int actualNumberOfProductInCart = shoppingCartPage.productName().size();
+        for(int i = 0; i < actualNumberOfProductInCart; i++) {
             productsInCart.add(shoppingCartPage.productName().get(i).getText());
         }
         for(int i=0;i<actualNumberOfProductInCart;i++)

@@ -33,7 +33,7 @@ public class CompareList
     public void userShouldFoundTheProductAddedInTheCompareList()
     {
         anyProductPage.compareList().click();
-        int numberOfItemsInCompareList=compareListPage.productName().size();
+        int numberOfItemsInCompareList = compareListPage.productName().size();
         for(int i=0;i<numberOfItemsInCompareList;i++)
         {
             actualProductInCompareList.add(compareListPage.productName().get(i).getText());
